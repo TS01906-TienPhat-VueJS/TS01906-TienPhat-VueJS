@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - Bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- FULL màn hình ngang -->
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <header class="row bg-warning p-3">
+            <h3 class="text-center m-0">Header</h3>
+        </header>
+
+        <!-- Nav -->
+        <nav class="row bg-primary p-3">
+            <h5 class="text-white text-center m-0">Nav</h5>
+        </nav>
+
+        <!-- Content (chiếm phần còn lại của màn hình) -->
+        <section class="row" style="min-height: calc(100vh - 180px);">
+            <!-- Sidebar -->
+            <aside class="col-sm-4 bg-success p-5">
+                <h5>Side bar</h5>
+            </aside>
+
+            <!-- Main content -->
+            <article class="col-sm-8 bg-info p-5">
+                <h5>Main content</h5>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <footer class="row bg-danger p-3">
+            <h5 class="text-white text-center m-0">Footer</h5>
+        </footer>
+
+    </div>
+
+</body>
+</html>
