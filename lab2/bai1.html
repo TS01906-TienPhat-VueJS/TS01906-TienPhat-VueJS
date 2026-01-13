@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 2 - Bootstrap 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* giảm width tối đa của bảng */
+    .table-wrap{ max-width: 520px; }
+
+    /* làm bảng gọn hơn nữa */
+    .table td, .table th{ padding: 4px 8px; }
+    .table{ font-size: 13px; }
+  </style>
+</head>
+
+<body class="p-4">
+  <h3 class="text-center text-danger mb-3">Bảng Thành Phần Dinh Dưỡng</h3>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- giảm cột lại: md=8, lg=6 -->
+      <div class="col-12 col-md-8 col-lg-6 table-wrap">
+        <table class="table table-bordered table-sm mb-0">
+          <thead>
+            <tr>
+              <th rowspan="2" style="background-color:#ffc107">Thành Phần</th>
+              <th colspan="2" style="background-color:#ffc107">Giá Trị</th>
+            </tr>
+            <tr>
+              <th style="background-color:#ffc107">Khối Lượng</th>
+              <th style="background-color:#ffc107">% DV*</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr><td>Calories</td><td>200 kcal</td><td>20%</td></tr>
+            <tr><td>Chất Béo</td><td>9 g</td><td>14%</td></tr>
+            <tr><td>Chất Béo Bão Hòa</td><td>4 g</td><td>20%</td></tr>
+            <tr><td>Chất Đạm</td><td>8 g</td><td>16%</td></tr>
+            <tr><td>Chất Xơ</td><td>5 g</td><td>20%</td></tr>
+            <tr><td rowspan="2">Đường</td><td>Đường trắng</td><td>25%</td></tr>
+            <tr><td>Đường đen</td><td>12</td></tr>
+
+            <tr><td rowspan="2">Vitamin</td><td>Vitamin C</td><td>25%</td></tr>
+            <tr><td>Vitamin D</td><td>10%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

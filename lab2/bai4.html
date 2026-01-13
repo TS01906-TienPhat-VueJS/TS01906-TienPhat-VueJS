@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 4 - Tab + Modal</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+
+  <div class="container">
+    <h4 class="mb-3">Bài tập ứng dụng Modal</h4>
+
+    <!-- Nút mở Modal -->
+    <button type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#accountModal">
+      Tài khoản
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="accountModalLabel">ĐĂNG NHẬP/ ĐĂNG KÝ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body">
+
+          <!-- Tab menu -->
+          <ul class="nav nav-tabs" id="accountTab" role="tablist">
+            <!-- Tab Đăng ký -->
+            <li class="nav-item" role="presentation">
+              <button class="nav-link"
+                      id="register-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#register"
+                      type="button"
+                      role="tab"
+                      aria-controls="register"
+                      aria-selected="false">
+                Đăng ký
+              </button>
+            </li>
+
+            <!-- Tab Đăng nhập (active) -->
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active"
+                      id="login-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#login"
+                      type="button"
+                      role="tab"
+                      aria-controls="login"
+                      aria-selected="true">
+                Đăng nhập
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab content -->
+          <div class="tab-content border border-top-0 p-3">
+
+            <!-- ===== TAB ĐĂNG KÝ ===== -->
+            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+
+              <h6 class="fw-bold mb-3">Đăng ký thông tin</h6>
+
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Họ tên</label>
+                  <input type="text" class="form-control" placeholder="Nhập họ tên">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Nhập email">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Số điện thoại</label>
+                  <input type="text" class="form-control" placeholder="Nhập số điện thoại">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Mật khẩu</label>
+                  <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Xác nhận mật khẩu</label>
+                  <input type="password" class="form-control" placeholder="Nhập lại mật khẩu">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Giới tính</label><br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" checked>
+                    <label class="form-check-label">Nam</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label class="form-check-label">Nữ</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Ngôn ngữ</label>
+                  <select class="form-select">
+                    <option selected>Tiếng Việt</option>
+                    <option>English</option>
+                  </select>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="agree">
+                  <label class="form-check-label" for="agree">
+                    Tôi đồng ý với các điều khoản và điều kiện
+                  </label>
+                </div>
+
+                <button type="button" class="btn btn-primary">Đăng ký</button>
+              </form>
+            </div>
+
+            <!-- ===== TAB ĐĂNG NHẬP ===== -->
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+
+              <h6 class="fw-bold mb-3">Form Đăng nhập</h6>
+
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Nhập email">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Mật khẩu</label>
+                  <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                </div>
+
+                <button type="button" class="btn btn-success">Đăng nhập</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
